@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en" class="gr__telegram_solutions">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+    <title>Telegram Unblocker</title>
+    <meta name="description" content="Just one click to UNBLOCK Telegram!">
+
+    <!-- Bootstrap core CSS -->
+    <link href="./assets/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./assets/cover.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body data-gr-c-s-loaded="true">
+
+<div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+            <div class="masthead clearfix">
+                <div class="inner"></div>
+            </div>
+
+            <div class="inner cover">
+                <img class="main_logo" src="./assets/t_logo.png">
+                <h1 class="cover-heading">Telegram Unblocker</h1>
+                <p class="lead">Your country blocked Telegram ? <br/>Just one click to bypass these blocks!</p>
+                <p class="lead">
+                                        <a href="tg://socks?server=proxy3.telegram.solutions&amp;port=8353&amp;user=tg&amp;pass=tg123" class="btn btn-lg btn-default">Unblock</a>
+                </p>
+                <p>
+                  
+
+                </p>
+            </div>
+
+            <div class="mastfoot">
+                <div class="inner">
+                        <p> Service restarts every 24 hours.
+                            
+                            <br/>  <span id="countdown"></span></p>
+                   </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./assets/jquery.min.js"></script>
+<script src="./assets/bootstrap.min.js"></script>
+<script src="./assets/countdown.min.js"></script>
+
+<script>
+var output_target = document.getElementById('countdown'),
+    label_builder = Countdown.Helper.Pluralize.label_builder_factory('en'),
+    countdown = new Countdown(
+      {
+        progress: function(seconds) {
+          output_target.innerHTML = label_builder(seconds);
+        },
+        complete: function() {
+          output_target.innerHTML = 'Server is refreshing !';
+        }
+      }
+    );
+
+var date = new Date();
+date.setHours(-date.getTimezoneOffset()/60);
+date.setMinutes(0);
+date.setSeconds(0);
+
+seconds_from_epoch_to_date_2038_problem = Math.floor(date.getTime()  / 1000);
+
+countdown.start_to(seconds_from_epoch_to_date_2038_problem);
+</script>
+</body></html>
